@@ -1,0 +1,200 @@
+
+@font-face {
+    font-family: benmono;
+    src: url(../fonts/benmono/BenmonoLiane-0W0or.ttf);
+    src: url(../fonts/benmono/BenmonoLiane-0W0or.otf);
+}
+
+body {
+    background-color: #C6E6D4;
+}
+
+
+.title {
+    font-family: benmono;
+    font-weight: 700;
+}
+ 
+
+/* background */
+:root{
+    --bg_green: #047b3a;
+    --white:#fff;
+    --green_inverse:#C6E6D4;
+    --background-color: #FDE3AA ;
+    --background-color: #d07b1a ;
+    --background-color: #F0B2BB ;
+    --background-color: #D31933 ;
+}
+  body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+  }
+ /* ----- Admi---------- */
+  
+.container{
+    position: relative;
+    width: 100%;
+   }
+  
+.navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--bg_green);
+    border-left: 10px solid var(--bg_green);
+    transition: 0.5s;
+    overflow: hidden;
+   }
+  
+   .container .navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 84%;
+   }
+  
+   .container .navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius:30px;
+    border-bottom-left-radius: 30px;
+   }
+  
+   .navigation ul li:hover,
+   .navigation ul li.hovered{
+    background-color: var(--white);
+   }
+
+  
+   .navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+   }
+  
+   .navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:var(--white);
+   }
+  
+   .navigation ul li a:hover,
+   .navigation ul li a.hovered{
+    color: var(--bg_green);
+   }
+   .navigation ul li a .icon{
+    position: relative;
+    display:block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+   }
+
+   .navigation ul li a .icon {
+    font-size: 1.75rem;
+   }
+
+   .navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+   }
+
+/* ====================================== */
+   .navigation ul li:hover a::before,
+   .navigation ul li.hovered a::before
+   {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+   }
+   
+   .navigation ul li:hover a::after,
+   .navigation ul li.hovered a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+   bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+   }
+
+
+
+
+   /*-- =======Main======= */
+   .main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #FDE3AA;
+    transition: 0.5s;
+   }
+
+   .topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+   }
+
+   .toogle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+   }
+
+   .search label{
+    position: absolute;
+    top: 0;
+    left:10px;
+    font-size: 1.2rem;
+   }
+
+   .user{
+    position: relative;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden; 
+    cursor:pointer;
+   }
+
+   .user .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+
